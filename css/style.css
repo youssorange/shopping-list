@@ -65,8 +65,8 @@ div{
 	height: 100vh;
 }
 
-.add-form {
-	width: 100%;
+.list-section .wrapper {
+	margin: 0 auto;
 }
 
 input[type="text"] {
@@ -78,7 +78,7 @@ input[type="text"] {
 	  appearance: none;
 	  box-shadow: none;
 	  border-radius: none;
-	  width:100%;
+	  width:90%;
 	    vertical-align: middle;
 
 
@@ -126,9 +126,10 @@ input[type="checkbox"]
 }
 
 #checkboxes ul {
-	margin: 0;
+	margin: 0 auto;
 	list-style:none;
 	padding: 0;
+	width: 100%;
 }
 
 li {
@@ -143,7 +144,9 @@ li {
 	line-height: 45px;
 }
 
-
+li:first-child {
+	margin-top: 40px;
+}
 
 p {
 	display: inline-block;

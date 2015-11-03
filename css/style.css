@@ -1,0 +1,180 @@
+/* =Reset
+-------------------------------------------------------------- */
+ 
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-top: 0;
+}
+ 
+html,
+body,
+section,
+div{
+    margin: 0;
+    padding: 0;
+}
+
+/* resets */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#container {
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+
+.main-bar {
+	background-image: url('../images/bg.jpg');
+    background-repeat: repeat-y;
+	z-index: 1000;
+	position: absolute;
+	overflow: hidden;
+	width: 30%;
+	max-width: 100%;
+	top: 0px;
+	left: 0px;
+	bottom:0;
+	padding: 2em 1em;
+	border: 0;
+}
+
+
+.main-title {
+	padding: 10px;
+	text-align: justify;
+
+}
+
+.list-section {
+	background-color: white;
+	float: right;
+	width: 70%;
+	padding: 3%;
+	overflow: hidden;
+	height: 100vh;
+}
+
+.add-form {
+	width: 100%;
+}
+
+input[type="text"] {
+	display:inline-block;
+	  margin: 0;
+	  height: 50px;
+	  font-family: sans-serif;
+	  font-size: 18px;
+	  appearance: none;
+	  box-shadow: none;
+	  border-radius: none;
+	  width:100%;
+	    vertical-align: middle;
+
+
+  padding: 10px;
+  border: solid 1px gainsboro;
+  -webkit-transition: box-shadow 0.3s, border 0.3s;
+  -moz-transition: box-shadow 0.3s, border 0.3s;
+  -o-transition: box-shadow 0.3s, border 0.3s;
+  transition: box-shadow 0.3s, border 0.3s;
+}
+
+
+
+input[type="button"] {
+
+  color: #ffffff;
+  text-decoration: none;
+  border: 1px #999999;
+   background-color: #999999;
+   height:50px;
+   width:50px;
+   cursor:pointer;
+text-align: center;
+
+}
+
+input[type="button"]:hover {
+  background: #24a3a3;
+  text-decoration: none;
+}
+
+
+
+input[type="checkbox"]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(2); /* IE */
+  -moz-transform: scale(2); /* FF */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+  -o-transform: scale(2); /* Opera */
+}
+
+#checkboxes label {
+	float: left;
+}
+
+#checkboxes ul {
+	margin: 0;
+	list-style:none;
+	padding: 0;
+}
+
+li {
+	display: block;
+	border: 1px dashed #979797;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+
+	font-size: 28px;
+	color:#4a4a4a;
+	line-height: 45px;
+}
+
+
+
+p {
+	display: inline-block;
+	padding-left: 0.5em;
+	padding-top: 1em;
+}
+
+
+
+@media (max-width: 500px) {
+.main-bar {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100px;
+    padding:0;
+    margin: 0;
+    overflow-y: auto;
+}
+
+
+li {
+	margin: 0 auto;
+	display: block;
+	border: 1px dashed #979797;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+
+}
+
+
+
+}

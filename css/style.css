@@ -8,15 +8,29 @@
     margin-top: 0;
 }
  
-html,
-body,
-section,
-div{
-    margin: 0;
-    padding: 0;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 	font-family: 'Open sans', Helvetica, sans-serif;
-	
+
 }
+
 
 /* resets */
 *,
@@ -30,9 +44,9 @@ div{
   clear: both;
 }
 
-#container {
+.container {
 	margin: 0 auto;
-	max-width: 1200px;
+
 }
 
 
@@ -43,7 +57,7 @@ div{
     opacity: 0.8;
 	z-index: 1000;
 	position: absolute;
-	overflow: hidden;
+	overflow: auto;
 	width: 30%;
 	max-width: 100%;
 	top: 0px;
@@ -88,14 +102,13 @@ div{
 .list-section {
 	background-color: white;
 	padding: 20px;
-	overflow: hidden;
+	overflow: auto;
 	height: 100vh;
 	padding-left: 33%;
 
 }
 
-.list-section .add-form {
-	background-color: red;
+form {
 	padding-right: 50px;
 	margin-top: 30px;
 }
@@ -112,6 +125,7 @@ input[type="text"] {
 	  vertical-align: middle;
 	  float: left;
 	  width: 100%;
+	  
 
 
 
@@ -160,12 +174,14 @@ input[type="checkbox"]
 
 
 
-.checkboxes ul {
+ul {
 	font-style: italic;
 	margin: 0 auto;
 	list-style:none;
 	padding: 0;
 	width: 100%;
+	margin-top: 70px;
+
 }
 
 li {
@@ -179,17 +195,69 @@ li {
 	color:#4a4a4a;
 	line-height: 45px;
 	padding-left: 10px;
+	padding-bottom: 20px;
+	padding-top: 20px;
+
 }
+
+span.item {
+	cursor: pointer;
+}
+
+.checked span.item {
+	text-decoration:line-through;
+
+}
+
 
 ul > li:first-child {
 	padding-top: 60px;
 }
 
-p {
+span {
 	display: inline-block;
-	padding-left: 0.5em;
-	padding-top: 1em;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+	width: 80%;
 }
+
+.box {
+	position: absolute;
+	background-color: red;
+	background: url('../images/checkbox.png') no-repeat 2px;
+	background-size: 200%;
+	height: 40px;
+	width: 40px;
+	display: block;
+	cursor: pointer;
+	margin-left: -10px;
+}
+
+.checkedBox {
+	position: absolute;
+	background: url('../images/checkbox.png') no-repeat -42px;
+	background-size: 200%;
+	height: 40px;
+	width: 40px;
+	display: block;
+	cursor: pointer;
+	margin-left: -10px;
+}
+
+.delete {
+	position: absolute;
+	right: 20px;
+	margin-top: 5px;
+	background: url('../images/delete-x2.png') no-repeat ;
+	background-size: 70%;
+	width: 40px;
+	height: 60px;
+	display: inline-block;
+	cursor: pointer;
+	margin-right: -10px;
+
+}
+
 
 
 @media (min-width: 1000px) {
@@ -197,6 +265,9 @@ p {
 	padding-right: 40px;
 }
 
+.delete {
+	margin-right: 10px;
+}
 }
 
 
@@ -205,8 +276,6 @@ p {
 	padding-right: 20px;
 
 }
-
-
 }
 
 
@@ -233,6 +302,8 @@ p {
 .list-section {
 	padding-top: 150px;
 	padding-left: 20px;
+	overflow: hidden;
+
 
 }
 
@@ -245,10 +316,11 @@ ul {
 li {
 	margin: 0 auto;
 	display: block;
-	border: 1px dashed #979797;
+	border: 1px dashed #979797 no-repeat;
 	border-top: none;
 	border-left: none;
-	border-right: none;
 }
 
 
+
+}

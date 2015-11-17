@@ -8,6 +8,7 @@ $('form').submit(function(event){
 	if (newItem !=""){
 		//user text sould be added to list with delete button
 		$('#list').append('<li><div class="box"></div><span class="item">' +newItem+ '</span><div class="delete"></div></li>');
+		$('form').trigger("reset");
 	} else{
 		alert('Type a new item');
 	}
@@ -28,13 +29,19 @@ $('#list').on('click','li', function(){
 $('#list').sortable({ axis: "y" });
 
 
-//sortable list items
+//show delete "X" when mouseover list
 
 $('#list').on('mouseenter', 'li', function(){
-		$(this).children('.delete').toggleClass('show');
+		$(this).find('.delete').show();
 	});
 $('#list').on('mouseleave', 'li', function(){
-		$(this).children('.delete').toggleClass('show');
+		$(this).find('.delete').hide();
 	});
+
+/*--- Clear the text box ---*/
+function clearText() {
+	$('#userGuess').val('');
+}
+
 
 });
